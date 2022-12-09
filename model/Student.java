@@ -11,6 +11,7 @@ public class Student implements Serializable {
     private double averagePoint;
 
     public Student() {
+
     }
 
     public Student(String maSV, String name, int age, String gender, String address, double averagePoint) {

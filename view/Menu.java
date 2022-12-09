@@ -7,9 +7,7 @@ import java.io.Serializable;
 public class Menu implements Serializable {
 
     public void menuStudent() {
-
         ManageStudent manageStudent = new ManageStudent();
-
 
         int choice;
         while (true) {

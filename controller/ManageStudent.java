@@ -47,7 +47,6 @@ public class ManageStudent {
         String address = scanner.nextLine();
         System.out.println("Nhập số điểm trung bình");
         double averagePoint = validateDouble();
-
         return new Student(maSV, name, age, gender, address, averagePoint);
     }
 

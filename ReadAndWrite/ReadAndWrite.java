@@ -30,7 +30,6 @@ public class ReadAndWrite {
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-
             String str = bufferedReader.readLine();
             while (str != null) {
                 String[] arr = str.split(", ");
