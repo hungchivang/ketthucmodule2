@@ -26,6 +26,7 @@ public class ReadAndWrite {
 
     public ArrayList<Student> read() {
         ArrayList<Student> students = new ArrayList<>();
+
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);

@@ -67,6 +67,7 @@ public class Menu implements Serializable {
                     manageStudent.WriteToFile();
                     break;
                 case 8:
+
                    System.exit(0);
             }
         }

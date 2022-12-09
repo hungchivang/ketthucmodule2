@@ -16,15 +16,15 @@ public class ManageStudent {
     Scanner scanner = new Scanner(System.in);
     List<Student> students = new ArrayList<>();
 
-     ReadAndWrite readAndWrite =new ReadAndWrite();
+    ReadAndWrite readAndWrite = new ReadAndWrite();
 
     public void show() {
         System.out.println("-----------------------------------------------Danh sách học sinh-----------------------------------------------");
-        System.out.printf("| %-25s| %-15s| %-15s| %-15s| %-15s| %-15s", "Mã học sinh", "Tên", "Tuổi", "Giới tính", "Địa chỉ", "Điểm trung bình");
+        System.out.printf("| %-15s| %-25s| %-15s| %-15s| %-15s| %-15s", "Mã học sinh", "Tên", "Tuổi", "Giới tính", "Địa chỉ", "Điểm trung bình");
         System.out.println();
         System.out.println("---------------------------------------------------------------------------------------------------------------");
         for (Student student : students) {
-            System.out.printf("| %-25s| %-15s| %-15s| %-15s| %-15s| %-15s", student.getMaSV(), student.getName(), student.getAge(), student.getGender(), student.getAddress(), student.getAveragePoint());
+            System.out.printf("| %-15s| %-25s| %-15s| %-15s| %-15s| %-15s", student.getMaSV(), student.getName(), student.getAge(), student.getGender(), student.getAddress(), student.getAveragePoint());
             System.out.println();
             System.out.println("---------------------------------------------------------------------------------------------------------------");
         }
@@ -33,6 +33,7 @@ public class ManageStudent {
     public void add() {
         students.add(createStudent());
     }
+
     public Student createStudent() {
         System.out.println("Nhập mã sinh viên");
         String maSV = scanner.nextLine();
@@ -132,7 +133,7 @@ public class ManageStudent {
 
     public void compareByAverageUp() {
         students.sort(new CompareByAveragePoint());
-        for (Student student:students) {
+        for (Student student : students) {
             System.out.println(student.toString());
         }
         show();
@@ -140,7 +141,7 @@ public class ManageStudent {
 
     public void compareByAverageDown() {
         students.sort(new CompareByAveragePoint().reversed());
-        for (Student student:students) {
+        for (Student student : students) {
             System.out.println(student.toString());
         }
         show();
